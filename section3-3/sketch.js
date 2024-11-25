@@ -9,13 +9,12 @@ function setup(){
 
 function draw(){
   background(160, 192, 255);
-  ellipse(x, y, 50);
-  if(keyIsDown(LEFT_ARROW)){ x -= 5; }
-  if(keyIsDown(RIGHT_ARROW)){ x += 5; }
-  if(keyIsDown(UP_ARROW)){ y -= 5; }
-  if(keyIsDown(DOWN_ARROW)){ y += 5; }
-  if(keyIsDown("A".charCodeAt(0))){ x+= 10; }
-  if(keyIsDown(" ".charCodeAt(0))){ x-= 10; }
+  ellipse(x, windowHeight - 25, 50);
+
+  let speed = 5;
+  if(keyIsDown("A".charCodeAt(0))){ speed = 10;}
+  if(keyIsDown(LEFT_ARROW)){ x -= speed; }
+  if(keyIsDown(RIGHT_ARROW)){ x += speed; }
 }
 
 // イベントハンドラを使用するパターン
